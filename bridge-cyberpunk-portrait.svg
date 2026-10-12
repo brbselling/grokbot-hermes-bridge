@@ -20,17 +20,17 @@
 <polygon points="672,60 850,60 850,238 828,260 650,260 650,82" fill="none" stroke="#FF2BD6" stroke-width="4" filter="url(#gs)"/>
 <text x="540" y="185" text-anchor="middle" fill="url(#holo)" font-size="80" font-weight="800" letter-spacing="2" filter="url(#g)">⇄</text>
 <g fill="url(#holo)" filter="url(#g)" font-weight="900" text-anchor="middle" letter-spacing="8"><text x="540" y="370" font-size="96">GROKBOT</text><text x="540" y="470" font-size="76">⇄ HERMES AGENT</text></g>
-<text x="540" y="535" text-anchor="middle" fill="#D6DEEC" font-size="28" font-weight="700" letter-spacing="2" >INSTANT BOTH WAYS · PRIVATE MESH</text>
-<text x="540" y="575" text-anchor="middle" fill="#D6DEEC" font-size="28" font-weight="700" letter-spacing="2" >REBUILDABLE AFTER ANY WIPE</text>
+<text x="540" y="535" text-anchor="middle" fill="#D6DEEC" font-size="28" font-weight="700" letter-spacing="2" >WEBHOOK WAKE + SSH REPLY (20–120 s)</text>
+<text x="540" y="575" text-anchor="middle" fill="#D6DEEC" font-size="25" font-weight="700" letter-spacing="2" >REBUILDABLE WITH RECOVERY GUIDE + RESTORED ACCESS</text>
 <polygon points="76,610 1020,610 1020,744 1004,760 60,760 60,626" fill="#0A0D16" stroke="#2A3550" stroke-width="2"/>
 <line x1="100" y1="665" x2="180" y2="665" stroke="#00E5FF" stroke-width="5"  filter="url(#g)"/>
 <text x="200" y="675" text-anchor="start" fill="#00E5FF" font-size="27" font-weight="800" letter-spacing="2" >SSH SEND</text>
 <line x1="570" y1="665" x2="650" y2="665" stroke="#39FF88" stroke-width="12"  filter="url(#g)"/>
-<text x="670" y="675" text-anchor="start" fill="#39FF88" font-size="27" font-weight="800" letter-spacing="2" >INSTANT WAKE</text>
+<text x="670" y="675" text-anchor="start" fill="#39FF88" font-size="27" font-weight="800" letter-spacing="2" >WEBHOOK (HTTPS)</text>
 <line x1="100" y1="723" x2="180" y2="723" stroke="#A86BFF" stroke-width="4" stroke-dasharray="12 8" filter="url(#g)"/>
 <text x="200" y="733" text-anchor="start" fill="#A86BFF" font-size="27" font-weight="800" letter-spacing="2" >BACKUP / REBUILD</text>
 <line x1="570" y1="723" x2="650" y2="723" stroke="#6A7285" stroke-width="3" stroke-dasharray="7 7" filter="url(#g)"/>
-<text x="670" y="733" text-anchor="start" fill="#9AA2B5" font-size="27" font-weight="800" letter-spacing="2" >RETIRED</text>
+<text x="670" y="733" text-anchor="start" fill="#9AA2B5" font-size="27" font-weight="800" letter-spacing="2" >PAUSED FALLBACK</text>
 <g opacity="1"><polygon points="354,800 740,800 740,906 726,920 340,920 340,814" fill="#0A0F1A" stroke="#D6DEEC" stroke-width="2.5"  filter="url(#g)"/>
 <text x="540.0" y="855.45" text-anchor="middle" fill="#D6DEEC" font-size="36" font-weight="800" letter-spacing="3" >USER</text>
 <text x="540.0" y="890.95" text-anchor="middle" fill="#AEB8CC" font-size="26" font-weight="800" letter-spacing="2" >EDGE DEVICE</text>
@@ -45,54 +45,54 @@
 <text x="500.0" y="1129.75" text-anchor="middle" fill="#00E5FF" font-size="30" font-weight="800" letter-spacing="3" >CHAT + AGENTS + ROUTINES</text>
 </g>
 <g opacity="1"><polygon points="94,1210 490,1210 490,1316 476,1330 80,1330 80,1224" fill="#0A0F1A" stroke="#FFB020" stroke-width="2.5"  filter="url(#g)"/>
-<text x="285.0" y="1263.5" text-anchor="middle" fill="#FFB020" font-size="30" font-weight="800" letter-spacing="3" >HEALTH CHECK</text>
-<text x="285.0" y="1297.2" text-anchor="middle" fill="#D6DEEC" font-size="26" font-weight="800" letter-spacing="2" >3× DAILY</text>
+<text x="285.0" y="1264.1" text-anchor="middle" fill="#FFB020" font-size="28" font-weight="800" letter-spacing="2" >WEBHOOK SELF-TEST</text>
+<text x="285.0" y="1295.3" text-anchor="middle" fill="#D6DEEC" font-size="24" font-weight="800" letter-spacing="2" >200 ≠ HERMES OK</text>
 </g>
 <g opacity="1"><polygon points="524,1210 920,1210 920,1316 906,1330 510,1330 510,1224" fill="#0A0F1A" stroke="#FFB020" stroke-width="2.5"  filter="url(#g)"/>
-<text x="715.0" y="1263.5" text-anchor="middle" fill="#FFB020" font-size="30" font-weight="800" letter-spacing="3" >SELF-REPAIR</text>
-<text x="715.0" y="1297.2" text-anchor="middle" fill="#D6DEEC" font-size="26" font-weight="800" letter-spacing="2" >3× DAILY</text>
+<text x="715.0" y="1264.1" text-anchor="middle" fill="#FFB020" font-size="28" font-weight="800" letter-spacing="2" >SELF-REPAIR + HEALTH</text>
+<text x="715.0" y="1295.3" text-anchor="middle" fill="#D6DEEC" font-size="24" font-weight="800" letter-spacing="2" >SSH → HERMES /health</text>
 </g>
 <path d="M285 1330V1384" fill="none" stroke="#FFB020" stroke-width="3" stroke-dasharray="3 7" marker-end="url(#aY)" filter="url(#g)" opacity="1"/>
-<text x="305" y="1368" text-anchor="start" fill="#FFB020" font-size="26" font-weight="800" letter-spacing="2" >PING</text>
+<text x="305" y="1368" text-anchor="start" fill="#FFB020" font-size="24" font-weight="800" letter-spacing="2" >POST 3×/DAY</text>
 <path d="M715 1330V1384" fill="none" stroke="#FFB020" stroke-width="3" stroke-dasharray="3 7" marker-end="url(#aY)" filter="url(#g)" opacity="1"/>
-<text x="735" y="1368" text-anchor="start" fill="#FFB020" font-size="26" font-weight="800" letter-spacing="2" >REPAIR</text>
+<text x="735" y="1368" text-anchor="start" fill="#FFB020" font-size="24" font-weight="800" letter-spacing="2" >3×/DAY</text>
 <polygon points="96,1390 490,1390 490,1604 474,1620 80,1620 80,1406" fill="#04190F" stroke="#39FF88" stroke-width="4.5" filter="url(#gs)"/>
 <text x="285" y="1500" text-anchor="middle" fill="#39FF88" font-size="54" font-weight="900" letter-spacing="6" >WEBHOOK</text>
-<text x="285" y="1550" text-anchor="middle" fill="#BFFFD8" font-size="28" font-weight="800" letter-spacing="2" >INSTANT WAKE</text>
+<text x="285" y="1550" text-anchor="middle" fill="#BFFFD8" font-size="28" font-weight="800" letter-spacing="2" >CLOUD ROUTINE</text>
 <g opacity="1"><polygon points="524,1390 920,1390 920,1606 906,1620 510,1620 510,1404" fill="#0A0F1A" stroke="#00E5FF" stroke-width="2.5"  filter="url(#g)"/>
 <text x="715.0" y="1486.8" text-anchor="middle" fill="#00E5FF" font-size="44" font-weight="800" letter-spacing="3" >BRIDGE</text>
 <text x="715.0" y="1524.7" text-anchor="middle" fill="#D6DEEC" font-size="26" font-weight="800" letter-spacing="2" >SSH KEY</text>
-<text x="715.0" y="1557.2" text-anchor="middle" fill="#D6DEEC" font-size="26" font-weight="800" letter-spacing="2" >PRIVATE MESH</text>
+<text x="715.0" y="1557.2" text-anchor="middle" fill="#D6DEEC" font-size="26" font-weight="800" letter-spacing="2" >VIA TAILSCALE</text>
 </g>
-<polygon points="36,1700 970,1700 970,1794 954,1810 20,1810 20,1716" fill="#0A0A1E" stroke="url(#holo)" stroke-width="2" stroke-dasharray="16 8" opacity=".95"/>
-<text x="500" y="1748" text-anchor="middle" fill="#D6DEEC" font-size="30" font-weight="800" letter-spacing="6" >PRIVATE MESH</text>
-<text x="500" y="1790" text-anchor="middle" fill="#D6DEEC" font-size="30" font-weight="800" letter-spacing="6" >TAILSCALE</text>
+<polygon points="536,1700 970,1700 970,1794 954,1810 520,1810 520,1716" fill="#0A0A1E" stroke="url(#holo)" stroke-width="2" stroke-dasharray="16 8" opacity=".95"/>
+<text x="850" y="1748" text-anchor="middle" fill="#D6DEEC" font-size="30" font-weight="800" letter-spacing="4" >TAILSCALE</text>
+<text x="850" y="1790" text-anchor="middle" fill="#D6DEEC" font-size="26" font-weight="800" letter-spacing="4" >SSH ONLY</text>
 <path d="M285 2050V1632" fill="none" stroke="#39FF88" stroke-width="16"  marker-end="url(#aG)" filter="url(#gs)" opacity="1"/>
 <path d="M715 1620V2042" fill="none" stroke="#00E5FF" stroke-width="6"  marker-end="url(#aC)" filter="url(#g)" opacity="1"/>
-<text x="315" y="1870" text-anchor="start" fill="#39FF88" font-size="32" font-weight="900" letter-spacing="2" >INSTANT WAKE ↑</text>
-<text x="315" y="1906" text-anchor="start" fill="#BFFFD8" font-size="24" font-weight="800" letter-spacing="1" >WEBHOOK POST · PRIMARY</text>
-<text x="315" y="1938" text-anchor="start" fill="#BFFFD8" font-size="26" font-weight="800" letter-spacing="2" >ZERO POLLING</text>
+<text x="315" y="1870" text-anchor="start" fill="#39FF88" font-size="32" font-weight="900" letter-spacing="2" >WEBHOOK WAKE ↑</text>
+<text x="315" y="1906" text-anchor="start" fill="#BFFFD8" font-size="24" font-weight="800" letter-spacing="1" >PUBLIC HTTPS POST</text>
+<text x="315" y="1938" text-anchor="start" fill="#BFFFD8" font-size="24" font-weight="800" letter-spacing="2" >NOT VIA TAILSCALE</text>
 <text x="690" y="1990" text-anchor="end" fill="#00E5FF" font-size="32" font-weight="900" letter-spacing="2" >SSH SEND ↓</text>
-<text x="690" y="2026" text-anchor="end" fill="#00E5FF" font-size="26" font-weight="800" letter-spacing="2" >OVER PRIVATE MESH</text>
+<text x="690" y="2026" text-anchor="end" fill="#00E5FF" font-size="26" font-weight="800" letter-spacing="2" >REPLIES 20–120 s</text>
 <polygon points="66,2050 960,2050 960,2639 934,2665 40,2665 40,2076" fill="#12071A" fill-opacity=".85" stroke="url(#h3)" stroke-width="3" filter="url(#g)"/>
 <g opacity="1"><polygon points="94,2090 920,2090 920,2196 906,2210 80,2210 80,2104" fill="#0A0F1A" stroke="#FF2BD6" stroke-width="2.5"  filter="url(#g)"/>
 <text x="500.0" y="2165.6" text-anchor="middle" fill="#FF2BD6" font-size="48" font-weight="800" letter-spacing="3" >HERMES AGENT</text>
 </g>
 <text x="500" y="2640" text-anchor="middle" fill="#FF2BD6" font-size="34" font-weight="800" letter-spacing="4" >HERMES AGENT · SELF-HOSTED</text>
 <path d="M715 2210V2262" fill="none" stroke="#6A7285" stroke-width="3" stroke-dasharray="7 7" marker-end="url(#aGr)" filter="url(#g)" opacity="0.7"/>
-<text x="695" y="2245" text-anchor="end" fill="#8A92A5" font-size="26" font-weight="800" letter-spacing="2" >RETIRED</text>
+<text x="695" y="2245" text-anchor="end" fill="#8A92A5" font-size="26" font-weight="800" letter-spacing="2" >PAUSED</text>
 <g opacity="0.65"><polygon points="524,2270 920,2270 920,2386 906,2400 510,2400 510,2284" fill="#0B0C10" stroke="#6A7285" stroke-width="2.5" stroke-dasharray="9 8" filter="url(#none)"/>
-<text x="715.0" y="2329.15" text-anchor="middle" fill="#6A7285" font-size="32" font-weight="800" letter-spacing="3" >OUTBOX</text>
-<text x="715.0" y="2363.45" text-anchor="middle" fill="#8A92A5" font-size="26" font-weight="800" letter-spacing="2" >RETIRED FALLBACK</text>
+<text x="715.0" y="2331.65" text-anchor="middle" fill="#6A7285" font-size="32" font-weight="800" letter-spacing="3" >OUTBOX</text>
+<text x="715.0" y="2362.15" text-anchor="middle" fill="#8A92A5" font-size="22" font-weight="800" letter-spacing="2" >MANUAL ONLY · NOT POLLED</text>
 </g>
 <g opacity="1"><polygon points="94,2440 920,2440 920,2576 906,2590 80,2590 80,2454" fill="#0A0F1A" stroke="#A86BFF" stroke-width="2.5"  filter="url(#g)"/>
 <text x="500.0" y="2494.85" text-anchor="middle" fill="#A86BFF" font-size="38" font-weight="800" letter-spacing="3" >KNOWLEDGE BASE</text>
 <text x="500.0" y="2530.95" text-anchor="middle" fill="#D6DEEC" font-size="26" font-weight="800" letter-spacing="2" >NIGHTLY BACKUPS</text>
-<text x="500.0" y="2563.45" text-anchor="middle" fill="#D6DEEC" font-size="26" font-weight="800" letter-spacing="2" >+ REBUILD ARCHIVE</text>
+<text x="500.0" y="2563.45" text-anchor="middle" fill="#D6DEEC" font-size="26" font-weight="800" letter-spacing="2" >+ RECOVERY GUIDE</text>
 </g>
 <path d="M960 1640H990V2480H928" fill="none" stroke="#A86BFF" stroke-width="3.5" stroke-dasharray="12 8" marker-end="url(#aV)" filter="url(#g)" opacity="1"/>
-<text x="0" y="0" text-anchor="middle" fill="#A86BFF" font-size="24" font-weight="800" letter-spacing="2" transform="translate(1022,2120) rotate(-90)">NIGHTLY BACKUP · SECRETS STRIPPED ↓</text>
+<text x="0" y="0" text-anchor="middle" fill="#A86BFF" font-size="24" font-weight="800" letter-spacing="2" transform="translate(1022,2120) rotate(-90)">NIGHTLY BACKUP · SECRETS EXCLUDED (POLICY) ↓</text>
 <path d="M920 2560H1055V1505H928" fill="none" stroke="#A86BFF" stroke-width="3.5" stroke-dasharray="12 8" marker-end="url(#aV)" filter="url(#g)" opacity="1"/>
-<text x="0" y="0" text-anchor="middle" fill="#A86BFF" font-size="24" font-weight="800" letter-spacing="2" transform="translate(1022,1560) rotate(-90)">↑ REBUILD ARCHIVE</text>
+<text x="0" y="0" text-anchor="middle" fill="#A86BFF" font-size="24" font-weight="800" letter-spacing="2" transform="translate(1022,1560) rotate(-90)">↑ RECOVERY GUIDE</text>
 <text x="540" y="2740" text-anchor="middle" fill="#7C88A0" font-size="26" font-weight="800" letter-spacing="5" >NOT EVERY EGG IN ONE BASKET</text>
 <rect width="1080" height="2780" fill="url(#scan)"/></svg>

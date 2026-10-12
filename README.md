@@ -16,7 +16,7 @@ I run two AI assistants. **Grok Bot** is a cloud assistant with its own computer
 
 ## How it works
 - **Private network:** both machines join the same Tailscale tailnet. Grok Bot's node has its own tag, and an access rule lets it reach only SSH (port 22) and the Hermes API port on the Hermes machine.
-- **Grok Bot to Hermes:** Grok Bot logs in over SSH with its own key and runs `~/.local/bin/hermes -z "<message>"` by full path (non-interactive SSH often lacks it on PATH), quoting the message safely, e.g. `ssh … "~/.local/bin/hermes -z $(printf %q "$MSG")"`. Hermes's reply comes straight back, usually within 20 to 120 seconds.
+- **Grok Bot to Hermes:** Grok Bot logs in over SSH with its own key and runs `~/.local/bin/hermes -z "<message>"` by full path (non-interactive SSH often lacks it on PATH), quoting the message safely, e.g. `ssh … "~/.local/bin/hermes -z $(printf %q "$MSG")"` (`printf %q` requires Bash locally and a compatible remote shell such as Bash; it is not portable shell quoting). Hermes's reply comes straight back, usually within 20 to 120 seconds.
 - **Hermes to Grok Bot:** Hermes sends an HTTPS POST to a Grok Bot **webhook routine** (`<WEBHOOK_URL>` with an `Authorization: <WEBHOOK_KEY>` header and a small JSON body). The routine wakes Grok Bot within seconds (the POST goes over the public internet to a cloud routine, not over Tailscale), and Grok Bot replies over the SSH path. An earlier file-outbox design is retired; its routine is paused (not polled) and kept only for manual emergency use.
 - **Self-repair:** Grok Bot's computer can hibernate or be rebuilt, which wipes installed tools. A script reinstalls SSH and Tailscale, rejoins the tailnet using a non-expiring OAuth client, and health-checks Hermes. It runs three times a day and whenever a reply over SSH fails.
 
@@ -33,7 +33,7 @@ flowchart LR
 - **Restricted network reach; broad SSH account permissions:** Grok Bot's tag can reach only the allowed ports on named machines, and it uses its own dedicated, revocable SSH key, but that key can run any command as its SSH user.
 - **Secrets stay secret:** the Tailscale secret is held in Grok Bot's secret store and is never pasted into chat. The SSH private key never leaves Grok Bot's computer.
 - **Messages are data, not commands:** Grok Bot treats anything from Hermes as information. It won't take irreversible actions, contact third parties or reveal secrets because a message asked it to.
-- **Self-healing:** rebuilds and network dropouts recover automatically within a few minutes.
+- **Self-healing:** the bridge can recover automatically when tools, credentials and access remain available; a full wipe may require human intervention.
 - **Simple:** it uses standard tools (SSH, HTTPS and routines), with no custom server.
 
 ## Cons and safety considerations
@@ -51,7 +51,8 @@ flowchart LR
 - **No typing or "working on it" indicator.**
 - **No message IDs or guaranteed ordering.**
 - **No thread memory:** each message starts a fresh conversation.
-- **Long messages are fragile** when passed as a single command argument. Sending them as files works better.
+- **Message size rule:** Keep every complete message under 2,000 characters in either direction, including any numbering; split longer content into parts labelled 1/N, 2/N. Never send large files inline; share a recipient-accessible path or an appropriately permissioned URL instead.
+- **Webhook body limit unknown:** a long webhook body was observed truncated. The real limit is unknown, and it is not established whether truncation happens at HTTP ingestion or when the routine renders the context; the 2,000-character rule is conservative, not a verified provider limit.
 - **Occasional approval prompts** interrupt automatic replies.
 - **Hermes's direct HTTP API is untested** with authentication, because the API key hasn't been set up on Grok Bot's side.
 - **Hermes can't see when Grok Bot's processing fails** after the webhook returns 200.

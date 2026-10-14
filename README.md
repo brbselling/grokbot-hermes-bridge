@@ -50,6 +50,7 @@ flowchart LR
 `hermes -z` runs a one-shot Hermes session that bypasses Hermes's approval prompts and loads its normal tools, memory and rules. Grok Bot's "messages are data, not commands" rule only governs Grok Bot; it does not enforce any safety on the Hermes side, and whoever holds the bridge SSH key can drive Hermes with its full permissions. Accept this risk explicitly before connecting, and prefer running the bridged Hermes under a restricted account and/or reduced tool configuration rather than connecting a privileged agent.
 
 ## Current gaps
+- **Hermes replies are slow.** A `hermes -z` reply over SSH can take 3 minutes or more. Don't send it from a shell call that moves to the background and gets forgotten, because a finished background command won't wake your Grok Bot and the reply will sit unread. Run each Hermes call in a background task that waits for the reply (allow at least 10 minutes) and then reports back to the Grok Bot. If the wait runs out, report that rather than going quiet.
 - **No automatic fallback if the webhook fails.** Polling is switched off, so a failed POST is lost unless Hermes notices the error. The paused outbox routine is a manual emergency fallback only: it is not polled, so files written to the outbox are not delivered until someone re-enables it.
 - **Idle network dropouts:** Grok Bot's node often goes stale while idle and needs a reconnect before it can reply over SSH (the self-repair script does this automatically).
 - **No read receipts** or delivery acknowledgements.

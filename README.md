@@ -1,4 +1,4 @@
-# Grok Bot ⇄ Hermes Agent bridge: an experimental overview
+# Grok Bot ⇄ Hermes Agent bridge: overview
 
 ![Grokbot to Hermes Agent architecture](bridge-cyberpunk-portrait.png)
 
